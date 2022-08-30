@@ -1,0 +1,15 @@
+{
+  "name": "cafeteria-backend",
+  "version": "1.0.0",
+  "description": "Primer practica de backend para el proyecto de la cafeteria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Daniela Cardozo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
