@@ -21,3 +21,5 @@ app.get('/', (req, res)=>{
 app.get('/prueba', (req, res)=>{
     res.send('otra peticion get')
 })
+
+//app.post('/')
