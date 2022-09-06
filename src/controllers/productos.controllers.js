@@ -6,6 +6,14 @@ export const listarProductos = (req, res)=>{
     res.send('enviar lista de productos')
 }
 
-export const obtenerProductos = (req, res)=>{
+export const obtenerProducto = (req, res)=>{
     res.send('aqui envio un objeto producto')
+}
+
+export const editarProducto = (req, res)=>{
+    res.send('editamos un producto')
+}
+
+export const borrarProducto = (req, res)=>{
+    res.send('borramos, eliminamos un producto')
 }
