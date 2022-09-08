@@ -25,7 +25,6 @@ export const crearProducto = async(req, res)=>{
             mensaje: 'El producto enviado no pudo ser creado'
         })
     }
-
 }
 
 export const listarProductos = async(req, res)=>{
@@ -61,6 +60,17 @@ export const editarProducto = (req, res)=>{
     res.send('editamos un producto')
 }
 
-export const borrarProducto = (req, res)=>{
-    res.send('borramos, eliminamos un producto')
+export const borrarProducto = async(req, res)=>{
+    try {
+        //buscar un producto por el id en la collection de productos de la BD y luego borrar
+        await Producto.findByIdAndDelete(req.params.id);
+        res.status(200).json({
+            mensaje: 'El producto fue eliminado correctamente'
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({
+            mensaje:'Error al intentar borrar por el producto'
+        })
+    }
 }
