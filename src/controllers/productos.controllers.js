@@ -56,8 +56,21 @@ export const obtenerProducto = async(req, res)=>{
     }
 }
 
-export const editarProducto = (req, res)=>{
-    res.send('editamos un producto')
+export const editarProducto = async(req, res)=>{
+    try {
+        //validacion
+
+        //buscar el producto por el id y luego modificar el producto
+        await Producto.findByIdAndUpdate(req.params.id, req.params.body);
+        res.status(200).json({
+            mensaje: 'El producto fue editado correctamente'
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({
+            mensaje:'Error al intentar editar el producto'
+        })
+    }
 }
 
 export const borrarProducto = async(req, res)=>{
@@ -70,7 +83,7 @@ export const borrarProducto = async(req, res)=>{
     } catch (error) {
         console.log(error);
         res.status(400).json({
-            mensaje:'Error al intentar borrar por el producto'
+            mensaje:'Error al intentar borrar el producto'
         })
     }
 }
