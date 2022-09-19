@@ -12,6 +12,7 @@ connection.once('open', ()=>{
     console.log('BD conectada')
 })
 
+//opcion 2
 // const connectDB = async ()=> {
 //     try {
 //         await mongoose.connect(url);
