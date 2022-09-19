@@ -27,4 +27,4 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('./public'));
 
 //rutas
-app.use('/apicafe', router )
+app.use('/apicafe', router);
