@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import './src/database';
 import router from './src/routes/productos.routes';
+import auth from './src/routes/usuarios.routes';
 import path from 'path';
 
 //const express = require('express')
@@ -31,3 +32,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //rutas
 app.use('/apicafe', router);
+app.use('/apicafe/auth', auth)
