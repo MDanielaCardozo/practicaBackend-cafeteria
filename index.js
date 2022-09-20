@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import './src/database';
 import router from './src/routes/productos.routes';
-import path from 'path'
+import path from 'path';
 
 //const express = require('express')
 
