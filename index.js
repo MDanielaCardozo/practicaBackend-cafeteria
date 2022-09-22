@@ -5,6 +5,7 @@ import './src/database';
 import router from './src/routes/productos.routes';
 import auth from './src/routes/usuarios.routes';
 import path from 'path';
+import * as dotenv from 'dotenv';
 
 //const express = require('express')
 
@@ -20,6 +21,7 @@ app.listen(app.get('port'), ()=>{
 })
 
 //middlewares
+dotenv.config();
 app.use(morgan('dev'));  //da informacion en la terminal
 app.use(cors()); //permite recibir peticiones remotas
 //los dos middlewares siguientes sirven para procesar un objeto JSON
